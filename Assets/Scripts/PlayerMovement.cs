@@ -8,10 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public InputAction playerControls;
 
     Vector3 movement = Vector3.zero;
-   [SerializeField] float forwardSpeed = 1f;
+   [SerializeField] public float forwardSpeed = 1f;
    [SerializeField] Rigidbody rb;
-    private float speed = 20f;
-
+    private float speed = 12f;
 
 
     private void OnEnable()
@@ -26,13 +25,15 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.position = Vector3.zero;
     }
 
     // Update is called once per frame
     void Update()
     {
         movement = playerControls.ReadValue<Vector3>();
+        
+
     }
     private void FixedUpdate()
     {

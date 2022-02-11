@@ -6,6 +6,7 @@ using UnityEngine;
 public class gameflow : MonoBehaviour
 {
     public Transform trackObj;
+    public GameObject[] randomtracks;
     private Vector3 nextTrackSpawn;
     void Start()
     {
@@ -14,7 +15,8 @@ public class gameflow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Instantiate(trackObj, nextTrackSpawn, trackObj.rotation);
+        int n = Random.Range(0, randomtracks.Length);
+        Instantiate(randomtracks[n], nextTrackSpawn, trackObj.rotation);
         nextTrackSpawn.z += 6f;
     }
 
