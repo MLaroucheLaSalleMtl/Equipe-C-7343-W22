@@ -5,13 +5,15 @@ using UnityEngine;
 public class FireTrap : MonoBehaviour
 {
     GameObject FireTrapBase;
+    public bool hit = false;
+    [SerializeField] private float Speed = 2;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
-            CharacterHit(other);
-            Destroy(FireTrapBase);
+          StartCoroutine(CharacterHit(other));
+       
         }
     }
     // Start is called before the first frame update
@@ -27,9 +29,21 @@ public class FireTrap : MonoBehaviour
     }
 
 
-    public void CharacterHit(Collider Character)
+   IEnumerator CharacterHit(Collider Character)
     {
         PlayerBehavior player = Character.GetComponent<PlayerBehavior>();
-        player.Live--;
+        PlayerMovement player2 = Character.GetComponent<PlayerMovement>();
+        if(hit == false)
+        {
+            player.Live--;
+            player2.forwardSpeed /= Speed;
+            hit = true;
+        }
+
+        yield return new WaitForSeconds(1);
+        player2.forwardSpeed *= Speed;
+        gameObject.SetActive(false);
+
+       
     }
 }

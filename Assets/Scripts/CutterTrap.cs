@@ -5,12 +5,14 @@ using UnityEngine;
 public class CutterTrap : MonoBehaviour
 {
     GameObject cutterTrapBase;
+    public bool cuttertraphit = false;
+    [SerializeField] private float Speed = 2;
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
-            CutterHit(other);
-            Destroy(cutterTrapBase);
+           StartCoroutine(CutterHit(other));
+         
         }
 
     }
@@ -26,10 +28,23 @@ public class CutterTrap : MonoBehaviour
         
     }
 
-    public void CutterHit(Collider Character)
+    IEnumerator CutterHit(Collider Character)
     {
+    
         PlayerBehavior player = Character.GetComponent<PlayerBehavior>();
+        PlayerMovement player2 = Character.GetComponent<PlayerMovement>();
+        if (cuttertraphit == false)
+        {
+            player.Live--;
+            player2.forwardSpeed /= Speed;
+            cuttertraphit = true;
+        }
 
-        player.Live--;
+        yield return new WaitForSeconds(1);
+
+        player2.forwardSpeed *= Speed;
+        gameObject.SetActive(false);
+
+       
     }
 }

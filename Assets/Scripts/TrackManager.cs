@@ -9,7 +9,7 @@ public class TrackManager : MonoBehaviour
     void Start()
     {
         
-        Invoke("Destroy", 1.0f);
+        //Invoke("Destroy", 60.0f);
     }
 
     private void Destroy()
@@ -17,9 +17,19 @@ public class TrackManager : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    private void FixedUpdate()
+    private void OnCollisionEnter(Collision collision)
     {
-        
-        transform.position = new Vector3(0, 0, transform.position.z*(1-speed));
+        if (collision.transform.tag == "Player")
+        {
+            Invoke("Destroy", 3.0f);
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+            Invoke("Destroy", 3.0f);
+        }
     }
 }

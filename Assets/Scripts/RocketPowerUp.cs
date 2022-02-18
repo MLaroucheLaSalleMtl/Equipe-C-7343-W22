@@ -6,12 +6,14 @@ public class RocketPowerUp : MonoBehaviour
 {
   [SerializeField]  public float powerupTime = 5f;
   [SerializeField]  public float multiplier = 2.00f;
+    public  bool isRocketPickedUp = false;
     private bool isRockettriggered = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
-        {                      
+        { 
+            
              StartCoroutine(Boost(other));
                            
         }
@@ -33,6 +35,7 @@ public class RocketPowerUp : MonoBehaviour
         PlayerMovement PlayerBoosted = Character.GetComponent<PlayerMovement>();
         if (isRockettriggered != true)
         {
+            isRocketPickedUp = true;
            
             PlayerBoosted.forwardSpeed *= multiplier;
             isRockettriggered = true;

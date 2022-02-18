@@ -7,24 +7,34 @@ public class gameflow : MonoBehaviour
 {
     public Transform trackObj;
     public GameObject[] randomtracks;
+    public GameObject[] randomitem;
     private Vector3 nextTrackSpawn;
+    private Vector3 nextItemSpawn;
+    int[] numbers = { -3, 0, 3 };
     void Start()
     {
+        nextTrackSpawn.z = 24f;
+        StartCoroutine(spawnTrack());
     }
 
     // Update is called once per frame
     void Update()
     {
-        int n = Random.Range(0, randomtracks.Length);
-        Instantiate(randomtracks[n], nextTrackSpawn, trackObj.rotation);
-        nextTrackSpawn.z += 6f;
+        //int n = Random.Range(0, randomtracks.Length);
+        //Instantiate(randomtracks[n], nextTrackSpawn, trackObj.rotation);
+        //nextTrackSpawn.z += 6f;
     }
 
-    //IEnumerable spawnTrack()
-    //{
-    //    yield return new WaitForSeconds(1);
-    //    Instantiate(trackObj, nextTrackSpawn, trackObj.rotation);
-    //    nextTrackSpawn.z += 6f;
-    //    StartCoroutine(spawnTrack());
-    //}
+    IEnumerator spawnTrack()
+    {
+        yield return new WaitForSeconds(0.25f);
+        int n = Random.Range(0, randomtracks.Length);
+        int m = Random.Range(0, randomitem.Length);
+        nextItemSpawn = nextTrackSpawn;
+        nextItemSpawn.x = numbers[Random.Range(0, 3)];
+        Instantiate(randomtracks[n], nextTrackSpawn, trackObj.rotation);
+        Instantiate(randomitem[m], nextItemSpawn, trackObj.rotation);
+        nextTrackSpawn.z += 6f;
+        StartCoroutine(spawnTrack());
+    }
 }
