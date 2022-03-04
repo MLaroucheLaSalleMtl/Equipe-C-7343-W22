@@ -6,30 +6,26 @@ public class TrackManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
+
+
+    
+
     void Start()
     {
+    }
+
+    void Update()
+    {
         
-        //Invoke("Destroy", 60.0f);
-    }
-
-    private void Destroy()
-    {
-        Destroy(this.gameObject);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.tag == "Player")
+        if(GameObject.FindWithTag("Player").transform.position.z -6 > GameObject.FindWithTag("Track").transform.position.z)
         {
-            Invoke("Destroy", 3.0f);
+            Destroy(GameObject.FindWithTag("Track"));
+        }
+        if (GameObject.FindWithTag("Player").transform.position.z - 6 > GameObject.FindWithTag("Trap").transform.position.z)
+        {
+            Destroy(GameObject.FindWithTag("Trap"));
         }
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.transform.tag == "Player")
-        {
-            Invoke("Destroy", 3.0f);
-        }
-    }
+
 }

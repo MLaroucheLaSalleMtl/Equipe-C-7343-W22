@@ -20,6 +20,7 @@ public class gameflow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //int n = Random.Range(0, randomtracks.Length);
         //Instantiate(randomtracks[n], nextTrackSpawn, trackObj.rotation);
         //nextTrackSpawn.z += 6f;

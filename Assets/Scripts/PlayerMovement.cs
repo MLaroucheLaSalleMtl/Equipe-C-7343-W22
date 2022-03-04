@@ -63,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         playerControls.MyControls.Move.ReadValue<Vector2>();
         playerControls.MyControls.Jump.ReadValue<float>();
         if (playerControls.MyControls.Jump.triggered);

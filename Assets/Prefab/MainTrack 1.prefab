@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 6511929200317386756}
   m_Layer: 0
   m_Name: MainTrack 1
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -700,6 +700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d319c5a0416624aaf088ebd3b2c04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &7636715622590041522
 GameObject:
   m_ObjectHideFlags: 0

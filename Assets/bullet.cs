@@ -15,14 +15,24 @@ public class bullet : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player") && gameObject.CompareTag("IceBall"))
         {
             Debug.Log("you hit the player!");
             enemy Enemy = other.transform.GetComponent<enemy>();
-            Enemy.TakeHit();
+            Enemy.IceBallHit();
             Destroy(gameObject);
-
+           
         }
+        else if(other.CompareTag("Player") && gameObject.CompareTag("FireBall"))
+        {
+
+            Debug.Log("you hit the player!");
+            enemy Enemy = other.transform.GetComponent<enemy>();
+            Enemy.FireBallHit();
+            Destroy(gameObject);
+        }
+
+        
     }
     
 

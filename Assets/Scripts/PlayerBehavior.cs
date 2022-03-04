@@ -6,13 +6,16 @@ public class PlayerBehavior : MonoBehaviour
 {
     [SerializeField] public int Live = 3;
     [SerializeField] public Rigidbody rb;
-    [SerializeField] private GameObject Bullet;
+    [SerializeField] private GameObject IceBullet;
+    [SerializeField] private GameObject FireBullet;
     private float force = -100f;
     private bool hit = false;
     public GameObject playerposition;
     public float range = 100f;
-    [SerializeField] public Rigidbody rbBullet;
-    private bool ProjectilePowerup = false;
+    //[SerializeField] public Rigidbody rbIceBullet;
+    //[SerializeField] public Rigidbody rbFireBullet;
+    private bool IceProjectilePowerUp = false;
+    private bool FireProjectilePowerUp = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +29,16 @@ public class PlayerBehavior : MonoBehaviour
         {
            Pushedback();
         }
-        if(other.CompareTag("Projectile"))
+        if(other.CompareTag("IceBall"))
         {
-            ProjectilePowerup = true;
+            IceProjectilePowerUp = true;
+            FireProjectilePowerUp = false;
+            Destroy(other.gameObject);
+        }
+        if(other.CompareTag("FireBall"))
+        {
+            FireProjectilePowerUp = true;
+            IceProjectilePowerUp = false;
             Destroy(other.gameObject);
         }
     }
@@ -47,7 +57,7 @@ public class PlayerBehavior : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire1") && ProjectilePowerup == true)
+        if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
@@ -68,9 +78,19 @@ public class PlayerBehavior : MonoBehaviour
 
 
         //rbNewBullet.AddForce(transform.forward * 1f);
-        GameObject newBullet = Instantiate(Bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z + 2f), Quaternion.identity);
-        Rigidbody rbNewBullet = newBullet.GetComponent<Rigidbody>();
-        ProjectilePowerup = false;
+        if(IceProjectilePowerUp)
+        {
+            GameObject newBullet = Instantiate(IceBullet, new Vector3(transform.position.x, transform.position.y, transform.position.z + 2f), Quaternion.identity);
+            Rigidbody rbNewBullet = newBullet.GetComponent<Rigidbody>();
+            IceProjectilePowerUp = false;
+        }
+        else if(FireProjectilePowerUp)
+        {
+            GameObject newBullet = Instantiate(FireBullet, new Vector3(transform.position.x, transform.position.y, transform.position.z + 2f), Quaternion.identity);
+            Rigidbody rbNewBullet = newBullet.GetComponent<Rigidbody>();
+            FireProjectilePowerUp = false;
+        }
+       
 
         /*if (Physics.Raycast(transform.position, transform.forward, out hit, range))
         {

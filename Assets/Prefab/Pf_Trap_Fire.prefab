@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4202691309680078760}
   m_Layer: 0
   m_Name: Pf_Trap_Fire
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4927,3 +4927,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d6e438feee5924cac4f980384115c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hit: 0
+  Speed: 2

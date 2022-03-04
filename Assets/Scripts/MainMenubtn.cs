@@ -12,7 +12,7 @@ public class MainMenubtn : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Endless Track Test");
     }
 
     public void QuitGame()

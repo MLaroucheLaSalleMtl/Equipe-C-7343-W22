@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7284194063428682530}
   m_Layer: 0
   m_Name: Pf_Trap_Needle
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,6 +80,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ac05dffa513a4b4b9cd62c69830acf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force: -2000
+  Normalspeed: 1
+  Speed: 2
 --- !u!1 &7284194064162845394
 GameObject:
   m_ObjectHideFlags: 0
