@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// SOURCES: https://www.youtube.com/watch?v=THnivyG0Mvo&ab_channel=Brackeys  //  https://www.youtube.com/watch?v=Nke5JKPiQTw&t=703s&ab_channel=CodeMonkey, Marc-André Larouche
 
+// programmer  100 % par Nabil
 public class PlayerBehavior : MonoBehaviour
 {
-    [SerializeField] public int Live = 3;
+    
     [SerializeField] public Rigidbody rb;
     [SerializeField] private GameObject IceBullet;
     [SerializeField] private GameObject FireBullet;

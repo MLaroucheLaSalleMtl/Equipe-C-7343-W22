@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerControls playerControls;
 
-    Vector3 movement = Vector3.zero;
+   // Vector3 movement = Vector3.zero;
     [SerializeField] public float forwardSpeed = 1f;
     [SerializeField] Rigidbody rb;
     [SerializeField] GroundCheck groundCheck;
@@ -17,8 +17,6 @@ public class PlayerMovement : MonoBehaviour
     public float maxGroundDistance = .3f;
     public bool isGrounded;
     [SerializeField] private float jumpForce = 5f;
-    private bool jump = false;
-    //public event System.Action Jumped;
 
 
     public void Awake()
@@ -26,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
 
         playerControls = new PlayerControls();
-        playerControls.MyControls.Jump.performed += Jumped;
 
     }
     void Reset()
@@ -48,10 +45,10 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Jumped(InputAction.CallbackContext context)
     {
-        if (context.performed & groundCheck.isGrounded)
-        {
-            rb.AddForce(Vector3.up * 100 * jumpForce);
-        }
+         if (context.performed && groundCheck.isGrounded)
+         {
+             rb.AddForce(Vector3.up * 100 * jumpForce);
+         }
     }
     // Start is called before the first frame update
     void Start()
@@ -64,23 +61,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        playerControls.MyControls.Move.ReadValue<Vector2>();
-        playerControls.MyControls.Jump.ReadValue<float>();
-        if (playerControls.MyControls.Jump.triggered);
     }
     void LateUpdate()
     {
-        //if (playerControls.MyControls.Jump.triggered && groundCheck.isGrounded)
-       /* if (jump && groundCheck.isGrounded)
-        {
-            rb.AddForce(Vector3.up * 100 * jumpForce);
-            //Jumped?.Invoke();
-        }*/
-        if (Input.GetButtonDown("Jump") && groundCheck.isGrounded)
-        {
-            rb.AddForce(Vector3.up * 100 * jumpForce);
-            //Jumped?.Invoke();
-        }
+
     }
     private void FixedUpdate()
     {

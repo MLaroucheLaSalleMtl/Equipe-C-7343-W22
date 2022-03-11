@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// programmer  100 % par Nabil
 public class CutterTrap : MonoBehaviour
 {
     GameObject cutterTrapBase;
@@ -31,7 +31,7 @@ public class CutterTrap : MonoBehaviour
     IEnumerator CutterHit(Collider Character)
     {
     
-        PlayerBehavior player = Character.GetComponent<PlayerBehavior>();
+        LiveCounter player = Character.GetComponent<LiveCounter>();
         PlayerMovement player2 = Character.GetComponent<PlayerMovement>();
         if (cuttertraphit == false)
         {

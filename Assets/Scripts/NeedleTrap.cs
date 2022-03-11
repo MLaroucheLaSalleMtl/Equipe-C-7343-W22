@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// programmer  100 % par Nabil
 public class NeedleTrap : MonoBehaviour
 {
     public float force = -2000f;
@@ -43,7 +43,7 @@ public class NeedleTrap : MonoBehaviour
 
     IEnumerator Trappedplayer(Collider Character)
     {
-      PlayerBehavior player = Character.GetComponent<PlayerBehavior>();
+      LiveCounter player = Character.GetComponent<LiveCounter>();
         PlayerMovement player2 = Character.GetComponent<PlayerMovement>();
         if (hit == false)
         {
