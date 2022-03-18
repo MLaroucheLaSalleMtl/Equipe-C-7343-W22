@@ -566,6 +566,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceBall
       objectReference: {fileID: 0}
+    - target: {fileID: 2239753326400491190, guid: 35dd7f02106bacc479f5ed05f7983e0f, type: 3}
+      propertyPath: m_Constraints
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2239753326400491191, guid: 35dd7f02106bacc479f5ed05f7983e0f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2239753326400491194, guid: 35dd7f02106bacc479f5ed05f7983e0f, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -666,6 +674,14 @@ PrefabInstance:
     - target: {fileID: 7613854857529821208, guid: 5f7af81f1d2c7d647a4e93f68dc5de85, type: 3}
       propertyPath: m_Name
       value: FireBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613854857529821209, guid: 5f7af81f1d2c7d647a4e93f68dc5de85, type: 3}
+      propertyPath: m_Constraints
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613854857529821210, guid: 5f7af81f1d2c7d647a4e93f68dc5de85, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f7af81f1d2c7d647a4e93f68dc5de85, type: 3}

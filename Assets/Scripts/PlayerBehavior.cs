@@ -82,7 +82,7 @@ public class PlayerBehavior : MonoBehaviour
         //rbNewBullet.AddForce(transform.forward * 1f);
         if(IceProjectilePowerUp)
         {
-            GameObject newBullet = Instantiate(IceBullet, new Vector3(transform.position.x, transform.position.y, transform.position.z + 2f), Quaternion.identity);
+            GameObject newBullet = Instantiate(IceBullet, new Vector3(transform.position.x, transform.position.y, transform.position.z + 2f), Quaternion.Euler(90,0,0));
             Rigidbody rbNewBullet = newBullet.GetComponent<Rigidbody>();
             IceProjectilePowerUp = false;
         }
