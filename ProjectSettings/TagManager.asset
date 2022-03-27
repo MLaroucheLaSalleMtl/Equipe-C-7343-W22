@@ -11,6 +11,7 @@ TagManager:
   - IceBall
   - Track
   - Live
+  - Obstacle
   layers:
   - Default
   - TransparentFX

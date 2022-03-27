@@ -5,8 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class KillPlayer : MonoBehaviour
 {
-    private void OnTriggerEnter()
+
+   
+    private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(3);
+        if(other.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(3);
+        }
+
+        if(other.CompareTag("FireBall") || other.CompareTag("IceBall"))
+        {
+
+            Destroy(gameObject.transform.parent.gameObject);
+         
+        }
+
+
+
+      
     }
 }

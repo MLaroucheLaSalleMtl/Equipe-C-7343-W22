@@ -7,7 +7,7 @@ public class bullet : MonoBehaviour
 {
     Rigidbody rb;
     GameObject OtherPlayer;
-    [SerializeField] float speed = 50f;
+    [SerializeField] float speed = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,14 +33,22 @@ public class bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
+       
+        if(other.CompareTag("Obstacle"))
+        {
+            Destroy(gameObject);
+        }
+       
         
     }
-    
+
+  
+
 
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(transform.forward * speed);
+        rb.AddForce(transform.up * speed);
        
 
         Destroy(gameObject, 5f);

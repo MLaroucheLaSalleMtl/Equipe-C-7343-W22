@@ -88,7 +88,7 @@ public class PlayerBehavior : MonoBehaviour
         }
         else if(FireProjectilePowerUp)
         {
-            GameObject newBullet = Instantiate(FireBullet, new Vector3(transform.position.x, transform.position.y, transform.position.z + 2f), Quaternion.identity);
+            GameObject newBullet = Instantiate(FireBullet, new Vector3(transform.position.x, transform.position.y, transform.position.z + 2f), Quaternion.Euler(90,0,0));
             Rigidbody rbNewBullet = newBullet.GetComponent<Rigidbody>();
             FireProjectilePowerUp = false;
         }

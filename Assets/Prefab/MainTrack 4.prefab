@@ -109,9 +109,10 @@ GameObject:
   - component: {fileID: 5319601388337049612}
   - component: {fileID: 1410203444077087122}
   - component: {fileID: 4654364455405475457}
+  - component: {fileID: 4043878084268229292}
   m_Layer: 0
   m_Name: KillZone (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,6 +195,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4043878084268229292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006439422344719868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a898bae187ade44392b826c8dd3563c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1170439861391188021
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,9 +317,10 @@ GameObject:
   - component: {fileID: 1666349084039961707}
   - component: {fileID: 2709150519538166430}
   - component: {fileID: 3452351563274828390}
+  - component: {fileID: 5091847850023776228}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -390,6 +404,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.99565727, y: 1, z: 0.55271244}
   m_Center: {x: -0.002171397, y: 0, z: -0.22364472}
+--- !u!114 &5091847850023776228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4221997241747009638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ac95b283b97c646a34f93345e75a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4658558702673662783
 GameObject:
   m_ObjectHideFlags: 0
