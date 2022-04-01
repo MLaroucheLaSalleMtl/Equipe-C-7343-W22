@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7284194064162416304}
   - component: {fileID: 7284194064168593812}
   - component: {fileID: 7284194063428682531}
-  - component: {fileID: 7284194063428682530}
+  - component: {fileID: 5492073791601278117}
   m_Layer: 0
   m_Name: Pf_Trap_Needle
   m_TagString: Trap
@@ -66,9 +66,9 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7284194063428682530
+  m_Size: {x: 1.9710952, y: 1.716453, z: 1.4242508}
+  m_Center: {x: -0.050489128, y: 0.35822648, z: -0.19652522}
+--- !u!114 &5492073791601278117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,12 +77,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7284194064162845392}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ac05dffa513a4b4b9cd62c69830acf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 9685c75f95832d6438c785cc10386fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: -2000
-  Normalspeed: 1
-  Speed: 2
 --- !u!1 &7284194064162845394
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +92,7 @@ GameObject:
   - component: {fileID: 7284194064161580754}
   - component: {fileID: 7284194064160645266}
   - component: {fileID: 7284194064156449492}
+  - component: {fileID: 2160728169832091944}
   m_Layer: 0
   m_Name: Needle
   m_TagString: Untagged
@@ -175,11 +173,26 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7284194064162845394}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.52995527, y: 0.5085304, z: 0.5162337}
-  m_Center: {x: 0.0019949228, y: 0.24579579, z: -0.002992615}
+  m_Size: {x: 1.0901443, y: 0.6288129, z: 0.9971533}
+  m_Center: {x: 0.03154093, y: 0.30593705, z: 0.006278038}
+--- !u!114 &2160728169832091944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7284194064162845394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac05dffa513a4b4b9cd62c69830acf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: -2000
+  Normalspeed: 1
+  Speed: 2
 --- !u!1 &7284194064162845396
 GameObject:
   m_ObjectHideFlags: 0

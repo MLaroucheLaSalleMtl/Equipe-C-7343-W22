@@ -488,7 +488,7 @@ PrefabInstance:
     - target: {fileID: 5181991971020473857, guid: 5ffc98eaff28c3941976089558c4ebd3, type: 3}
       propertyPath: FireBullet
       value: 
-      objectReference: {fileID: 3864688025060342729, guid: 679ae1aebaa5f6341ab5a59dddb4c65a, type: 3}
+      objectReference: {fileID: 6456462949028587343, guid: 7c8ae35b79a9ca448b3fd2c90359ae3c, type: 3}
     - target: {fileID: 5181991971020473857, guid: 5ffc98eaff28c3941976089558c4ebd3, type: 3}
       propertyPath: rbIceBullet
       value: 

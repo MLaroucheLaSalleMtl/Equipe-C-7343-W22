@@ -4,26 +4,24 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//Nabil 33% Alexy 33% Luca 33%
 public class LiveCounter : MonoBehaviour
 {
     public Image[] lives;
     [SerializeField] public int Live;
     public int maxLive = 3;
    
-    private int livesremaining;
     // Start is called before the first frame update
     void Start()
     {
 
         Live = maxLive;  
-       // livesremaining = Live;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //livesremaining = Live;
-        //lives[livesremaining+1].enabled = false;
+
         if (Live == 3)
         {
             lives[2].enabled = true;
@@ -44,7 +42,7 @@ public class LiveCounter : MonoBehaviour
         }
         if (Live <= 0)
         {
-            lives[0].enabled = false;
+            lives[1].enabled = false;
             SceneManager.LoadScene("Game Over");
         }
     }

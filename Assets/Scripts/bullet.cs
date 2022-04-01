@@ -33,17 +33,13 @@ public class bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-       
         if(other.CompareTag("Obstacle"))
         {
             Destroy(gameObject);
         }
        
-        
     }
-
-  
-
+    
 
     // Update is called once per frame
     void Update()
@@ -51,6 +47,6 @@ public class bullet : MonoBehaviour
         rb.AddForce(transform.up * speed);
        
 
-        Destroy(gameObject, 5f);
+        //Destroy(gameObject, 5f);
     }
 }

@@ -12,6 +12,8 @@ TagManager:
   - Track
   - Live
   - Obstacle
+  - FxTemporaire
+  - FireTrap
   layers:
   - Default
   - TransparentFX

@@ -27,6 +27,10 @@ public class NeedleTrap : MonoBehaviour
             
            
         }
+        if(other.CompareTag("IceBall") || other.CompareTag("FireBall"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Start is called before the first frame update

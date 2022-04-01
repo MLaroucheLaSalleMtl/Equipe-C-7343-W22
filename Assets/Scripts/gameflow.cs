@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Source https://www.youtube.com/watch?v=Q4rtR8iNFbY
-//programmer 100% Luca
 public class gameflow : MonoBehaviour
 {
     public Transform trackObj;
@@ -22,9 +21,6 @@ public class gameflow : MonoBehaviour
     void Update()
     {
 
-        //int n = Random.Range(0, randomtracks.Length);
-        //Instantiate(randomtracks[n], nextTrackSpawn, trackObj.rotation);
-        //nextTrackSpawn.z += 6f;
     }
 
     IEnumerator spawnTrack()

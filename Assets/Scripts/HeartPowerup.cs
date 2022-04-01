@@ -4,7 +4,7 @@ using UnityEngine;
 // programmer  100 % par Nabil
 public class HeartPowerup : MonoBehaviour
 {
-  
+    [SerializeField] ParticleSystem HeartParticle;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,13 +14,14 @@ public class HeartPowerup : MonoBehaviour
         {
             Debug.Log(player.Live);
             player.Live++;
-
+          
             //healthPickedUp(other);
-            Destroy(gameObject);
+          // Destroy(gameObject);
             Debug.Log(player.Live);
         }
-        
+       
     }
+
 
 
 

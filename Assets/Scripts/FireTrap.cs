@@ -15,6 +15,7 @@ public class FireTrap : MonoBehaviour
           StartCoroutine(CharacterHit(other));
        
         }
+       
     }
     // Start is called before the first frame update
     void Start()

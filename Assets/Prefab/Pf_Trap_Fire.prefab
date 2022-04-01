@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 4202691309686957288}
   - component: {fileID: 4202691309688055464}
   - component: {fileID: 4202691309680078760}
+  - component: {fileID: 63315003339484230}
+  - component: {fileID: 171472867880884068}
   m_Layer: 0
   m_Name: Pf_Trap_Fire
-  m_TagString: Trap
+  m_TagString: FireTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +102,31 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!65 &63315003339484230
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4202691309690048744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.299072, y: 0.7797809, z: 1}
+  m_Center: {x: 0.02195242, y: 0.38989046, z: 0}
+--- !u!114 &171472867880884068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4202691309690048744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9685c75f95832d6438c785cc10386fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4202691309690072474
 GameObject:
   m_ObjectHideFlags: 0
