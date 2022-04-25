@@ -34,14 +34,15 @@ public class PlayParticleSystem : MonoBehaviour
         }
         if(other.CompareTag("Live"))
         {
-           
-            if(isOnFire)
+            HeartParticleSystem();
+           /* if (isOnFire)
             {
                 StopFireParticle();
-            }
-            HeartParticleSystem();
+            }*/
+          
 
         }
+       
     }
     void PlayBloodparticle()
     {

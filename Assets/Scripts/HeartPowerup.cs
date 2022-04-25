@@ -4,8 +4,7 @@ using UnityEngine;
 // programmer  100 % par Nabil
 public class HeartPowerup : MonoBehaviour
 {
-    [SerializeField] ParticleSystem HeartParticle;
-
+   
     private void OnTriggerEnter(Collider other)
     {
         LiveCounter player = other.GetComponent<LiveCounter>();
